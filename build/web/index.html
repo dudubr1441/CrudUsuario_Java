@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="geral.css" media="screen" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="login_cadastro">
+            <div id="teste">
+                <label id="titulo">faça seu cadastro</label>
+                <form action="Cadastro" method="POST">
+                <div class="area-superior">
+                    <label>CPF: </label> <input type="text" name="CPF" placeholder="digite o seu cpf" class="formata-input">
+                </div>
+                <div class="area-superior">
+                    <label>Email: </label> <input type="text" name="Email" placeholder="digite sua senha" class="formata-input">
+                </div>
+                <div class="area-superior">
+                    <label>Senha: </label> <input type="text" name="senha" placeholder="digite sua senha" class="formata-input">
+                </div>
+                <div class="area-superior">
+                    <label>Sexo:</label>
+                    <select name="sexo" id="sexo">
+                        <option value="Masculino" selected>Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Neutro">Neutro</option>
+                    </select>
+                </div>
+                <div class="area-superior">
+                    <input type="submit" value="Cadastrar" id="botao-input">   
+                </div>
+                </form>
+            </div>
+            <label><a href="Login.jsp"> você já tem cadastro?</a></label><br>
+            <label><a href="teste.html">teste</a></label>
+        </div>
+    </body>
+</html>
+
