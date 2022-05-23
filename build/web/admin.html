@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <link rel="stylesheet" type="text/css" href="geral.css" media="screen" />
+</head>
+<body>
+    <div class="login_cadastro">
+        <div id="teste">
+            <div id="titulo-div">
+            <label id="titulo">Login</label>
+             </div>
+            <form id="formularioCadastro" method="post" action="/crud_usuario/loginadmin">
+            <div class="area-superior">
+                <label>Usuario: </label> <input type="text" name="usuario" placeholder="digite seu email" id="usuario" class="formata-input" maxlength="255">
+            </div>
+            <div class="area-superior">
+                <label>Senha: </label> <input type="text" name="senha" placeholder="digite sua senha" class="formata-input" maxlength="22">
+            </div>
+            <div class="area-superior">
+            <div class="area-superior">
+                <input type="submit" value="Entrar" id="botaoinput" onclick="//registrarUsuario()"> 
+            </div>
+            </form>
+            <div class="area-superior">                    
+                <label id="ResultadoCadastro" style="font-family: 'Times New Roman', Times, serif;"></label>  
+            </div>
+        </div>
+    </div>
+</body>
+</html>

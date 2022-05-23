@@ -21,10 +21,11 @@ public class ConectarBanco {
             Class.forName("com.mysql.cj.jdbc.Driver");
             driver = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrudUsuario"
             +"?useTimezone=true&serverTimezone=America/Sao_Paulo&zeroDateTimeBehavior=convertToNull",
-                    "root","10092003");
+                    "root","admin");
         } catch (SQLException e) {
             System.err.println("erro na conexão com o banco: "+ e.getMessage());
         }
+            System.out.println("");
         return driver;
     }
   public static void fecharConexao(Connection conn, Statement psmt, ResultSet rs) throws SQLException {

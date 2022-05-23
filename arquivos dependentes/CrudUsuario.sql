@@ -21,4 +21,4 @@ select *from Admin;
 drop table Admin;
 select *from Usuario;
 drop table Usuario;
-SELECT * FROM Usuario WHERE email = '02641344947' and cpf = 'masterdudu123@hotmail.com';
+SELECT * FROM Usuario WHERE email = '14124469969' or cpf = 'masterdudu123@hotmail.com';

@@ -24,7 +24,7 @@ public class UsuarioDAO {
     
    public Boolean AnalisaUsuario (Usuario usuario) throws SQLException, ClassNotFoundException{
        try{
-       sql = "SELECT * FROM Usuario WHERE cpf = ? and email = ?";
+       sql = "SELECT * FROM Usuario WHERE cpf = ? or email = ?";
        conexao = ConectarBanco.abrirConexao();
        preparando = conexao.prepareStatement(sql);
        preparando.setString(2,usuario.getEmail());
@@ -46,5 +46,5 @@ public class UsuarioDAO {
        preparando.setString(3,usuario.getSenha());
        preparando.setString(4,usuario.getSexo());
        preparando.executeUpdate();
-   }
+   } 
 }

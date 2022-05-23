@@ -9,7 +9,7 @@ body{
     font-family: arial;
 }
 #teste{
-    margin-top: 40px;
+    margin-top: 150px;
 }
 .login_cadastro{
     height: 450px;
@@ -40,6 +40,8 @@ label{
     border-radius: 6px;
     font: bold 15px arial, sans-serif;
     text-shadow:none;
+    display: flex;
+    justify-content: center;
 }
 .area-superior{
     display: flex;
@@ -47,4 +49,7 @@ label{
     flex-wrap: wrap;
     margin-top: 10px;
     margin-right: 40px;
+}
+#titulo-div{
+    margin-bottom: 100px;
 }
