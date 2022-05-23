@@ -8,6 +8,9 @@ body{
     font-size: 20px;
     font-family: arial;
 }
+#teste{
+    margin-top: 40px;
+}
 .login_cadastro{
     height: 450px;
     width: 500px;
@@ -27,14 +30,14 @@ label{
 .formata-input{
     border-radius: 10px;
 }
-#botao-input{
+#botaoinput{
     background: #0066A2;
     color: white;
     border-style: outset;
     border-color: #0066A2;
     height: 30px;
     width: 90px;
-    border-radius: 5px;
+    border-radius: 6px;
     font: bold 15px arial, sans-serif;
     text-shadow:none;
 }

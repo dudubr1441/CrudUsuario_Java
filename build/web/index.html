@@ -5,37 +5,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="geral.css" media="screen" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+        <!--<script type="text/javascript" src="index.js"></script>-->
     </head>
     <body>
         <div class="login_cadastro">
             <div id="teste">
                 <label id="titulo">faça seu cadastro</label>
-                <form action="Cadastro" method="POST">
+                <form id="formularioCadastro" method="post" action="/crud_usuario/registrausuario">
                 <div class="area-superior">
-                    <label>CPF: </label> <input type="text" name="CPF" placeholder="digite o seu cpf" class="formata-input">
+                    <label>CPF: </label> <input type="text" name="cpf" id="CPF" placeholder="digite o seu cpf" maxlength="11" class="formata-input">
                 </div>
                 <div class="area-superior">
-                    <label>Email: </label> <input type="text" name="Email" placeholder="digite sua senha" class="formata-input">
+                    <label>Email: </label> <input type="text" name="email" placeholder="digite seu email" id="email" class="formata-input" maxlength="255">
                 </div>
                 <div class="area-superior">
-                    <label>Senha: </label> <input type="text" name="senha" placeholder="digite sua senha" class="formata-input">
+                    <label>Senha: </label> <input type="text" name="senha" placeholder="digite sua senha" class="formata-input" maxlength="22">
                 </div>
                 <div class="area-superior">
                     <label>Sexo:</label>
                     <select name="sexo" id="sexo">
-                        <option value="Masculino" selected>Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Neutro">Neutro</option>
+                        <option value="masculino" selected>masculino</option>
+                        <option value="feminino">feminino</option>
+                        <option value="neutro">neutro</option>
                     </select>
                 </div>
                 <div class="area-superior">
-                    <input type="submit" value="Cadastrar" id="botao-input">   
+                    <input type="submit" value="Cadastrar" id="botaoinput" onclick="registrarUsuario()"> 
                 </div>
                 </form>
+                <div class="area-superior">                    
+                    <label id="ResultadoCadastro" style="font-family: 'Times New Roman', Times, serif;"></label>  
+                </div>
             </div>
-            <label><a href="Login.jsp"> você já tem cadastro?</a></label><br>
-            <label><a href="teste.html">teste</a></label>
         </div>
     </body>
 </html>
