@@ -5,16 +5,16 @@
         <servlet-class>CRUD_USUARIO.Servlet.RegistraUsuario</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>loginusuario</servlet-name>
-        <servlet-class>CRUD_USUARIO.Servlet.loginusuario</servlet-class>
+        <servlet-name>login_admin</servlet-name>
+        <servlet-class>CRUD_USUARIO.Servlet.login_admin</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistraUsuario</servlet-name>
         <url-pattern>/registrausuario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>loginusuario</servlet-name>
-        <url-pattern>/loginusuario</url-pattern>
+        <servlet-name>login_admin</servlet-name>
+        <url-pattern>/loginadmin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

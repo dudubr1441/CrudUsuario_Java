@@ -29,11 +29,11 @@ public class AdminDao {
     preparando.setString(2, senha);
     resultSet = preparando.executeQuery();
        if (resultSet.next()) {
-           return false;
+           return true;
        }
-    } catch (Exception e) { 
+    } catch (ClassNotFoundException | SQLException e) { 
     
     }finally{ConectarBanco.fecharConexao(conexao, preparando, resultSet);}  
-     return true;
+     return false;
    }
 }

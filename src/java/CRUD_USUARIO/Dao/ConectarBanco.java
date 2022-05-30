@@ -21,7 +21,7 @@ public class ConectarBanco {
             Class.forName("com.mysql.cj.jdbc.Driver");
             driver = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrudUsuario"
             +"?useTimezone=true&serverTimezone=America/Sao_Paulo&zeroDateTimeBehavior=convertToNull",
-                    "root","admin");
+                    "root","10092003");
         } catch (SQLException e) {
             System.err.println("erro na conexão com o banco: "+ e.getMessage());
         }

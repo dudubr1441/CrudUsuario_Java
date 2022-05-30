@@ -46,5 +46,5 @@ public class UsuarioDAO {
        preparando.setString(3,usuario.getSenha());
        preparando.setString(4,usuario.getSexo());
        preparando.executeUpdate();
-   } 
+   }
 }

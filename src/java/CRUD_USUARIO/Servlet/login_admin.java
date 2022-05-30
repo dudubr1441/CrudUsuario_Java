@@ -11,26 +11,19 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.RequestDispatcher;
-import CRUD_USUARIO.Dao.AdminDao;
 import CRUD_USUARIO.Entidade.Admin;
+import CRUD_USUARIO.Dao.AdminDao;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
+import org.json.JSONObject;
 
 /**
  *
- * @author luiz.carvalho1
+ * @author maste
  */
-public class loginusuario extends HttpServlet {  // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+public class login_admin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -49,23 +42,21 @@ public class loginusuario extends HttpServlet {  // <editor-fold defaultstate="c
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+            AdminDao adminDao = new AdminDao();
             String usuario = request.getParameter("usuario");
             String senha = request.getParameter("senha");
-            AdminDao adminDao = new AdminDao();
-            if (adminDao.analisaAdmin(usuario, senha)) {
-                Admin admin = new Admin();
-                admin.setSenha(senha);
-                admin.setUsuario(usuario);
-                RequestDispatcher despacha = request.getRequestDispatcher("adminControler.html");
-                despacha.forward(request, response);
-              } else {
-                RequestDispatcher despacha = request.getRequestDispatcher("admin.html");
-                despacha.forward(request, response);
+            JSONObject json = new JSONObject();
+            if(adminDao.analisaAdmin(usuario, senha)){
+            json.put("status","sucesso");
+            RequestDispatcher rd = request.getRequestDispatcher("admincrud.html");
+            rd.forward(request, response);
+            response.getWriter().print(json);
+            }else{
+            json.put("status","erro");
+            response.getWriter().print(json);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(loginusuario.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(loginusuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(login_admin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
