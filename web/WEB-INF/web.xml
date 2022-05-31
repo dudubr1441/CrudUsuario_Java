@@ -22,7 +22,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListaUsuario</servlet-name>
-        <url-pattern>/ListaUsuario</url-pattern>
+        <url-pattern>/listausuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
