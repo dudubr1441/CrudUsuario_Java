@@ -1,6 +1,7 @@
 package CRUD_USUARIO.Entidade;
 
-import java.time.LocalDate;
+import java.sql.Date;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -66,4 +67,19 @@ public class Usuario {
     private String email;
     private String senha;
     private String sexo;
+    private Date dataregistro;
+
+    /**
+     * @return the dataregistro
+     */
+    public Date getDataregistro() {
+        return dataregistro;
+    }
+
+    /**
+     * @param dataregistro the dataregistro to set
+     */
+    public void setDataregistro(Date dataregistro) {
+        this.dataregistro = dataregistro;
+    }
 }

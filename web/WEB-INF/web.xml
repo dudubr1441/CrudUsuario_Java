@@ -8,6 +8,10 @@
         <servlet-name>login_admin</servlet-name>
         <servlet-class>CRUD_USUARIO.Servlet.login_admin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListaUsuario</servlet-name>
+        <servlet-class>CRUD_USUARIO.Servlet.ListaUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistraUsuario</servlet-name>
         <url-pattern>/registrausuario</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>login_admin</servlet-name>
         <url-pattern>/loginadmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaUsuario</servlet-name>
+        <url-pattern>/ListaUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
