@@ -1,1 +1,1 @@
-crud feito com java EE e html+css+javascript(Jquery)
+crud done with java EE and html+css+javascript(Jquery)
